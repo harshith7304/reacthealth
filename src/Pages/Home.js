@@ -7,7 +7,7 @@ import BookAppointment from "../Components/BookAppointment";
 import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Doctors";
 import Footer from "../Components/Footer";
-import { useLocation } from "react-router-dom";
+
 
 function Home() {
   return (
