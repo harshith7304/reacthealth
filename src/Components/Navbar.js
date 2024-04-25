@@ -6,6 +6,7 @@ import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -14,79 +15,31 @@ function Navbar() {
     setNav(!nav);
   };
 
-  // const handleChatBtnClick = () => {
-  //   if (!isButtonDisabled) {
-  //     toast.info("high traffic, Please wait a moment."Experiencing , {
-  //       position: toast.POSITION.TOP_CENTER,
-  //       onOpen: () => setIsButtonDisabled(true),
-  //       onClose: () => setIsButtonDisabled(false),
-  //     });
-  //   }
-  // };
-  // const handleChatBtnClick = () => {
-  //   if (!isButtonDisabled) {
-  //     // Open WhatsApp or WhatsApp Web
-  //     const whatsappUrl = "https://web.whatsapp.com/";
-  //     window.open(whatsappUrl, "_blank");
-
-  //     // Display toast message
-  //     toast.info("Redirecting to WhatsApp...", {
-  //       position: toast.POSITION.TOP_CENTER,
-  //       onOpen: () => setIsButtonDisabled(true),
-  //       onClose: () => setIsButtonDisabled(false),
-  //     });
-  //   }
-  // };
-  // const handleChatBtnClick = () => {
-  //   if (!isButtonDisabled) {
-  //     // Check if WhatsApp is installed on the device
-  //     const isWhatsAppInstalled = /(android|iphone)/i.test(navigator.userAgent);
-
-  //     if (isWhatsAppInstalled) {
-  //       // If WhatsApp is installed, open the app
-  //       const whatsappUrl = "whatsapp://send?phone=+91 9182095396";
-  //       window.open(whatsappUrl, "_blank");
-  //     } else {
-  //       // If WhatsApp is not installed, open WhatsApp Web
-  //       const whatsappWebUrl = "https://web.whatsapp.com/";
-  //       window.open(whatsappWebUrl, "_blank");
-  //     }
-
-  //     // Display toast message
-  //     toast.info("Redirecting to WhatsApp...", {
-  //       position: toast.POSITION.TOP_CENTER,
-  //       onOpen: () => setIsButtonDisabled(true),
-  //       onClose: () => setIsButtonDisabled(false),
-  //     });
-  //   }
-  // };
   const handleChatBtnClick = () => {
     if (!isButtonDisabled) {
       // Check if WhatsApp is installed on the device
       const isWhatsAppInstalled = /(android|iphone)/i.test(navigator.userAgent);
 
+      // Replace with the desired phone number
+      const phoneNumber = "+919182095396";
+
       if (isWhatsAppInstalled) {
-        // If WhatsApp is installed, open the app and start a chat with the specified phone number
-        const phoneNumber = "+919182095396"; // Replace with the desired phone number
+        // If WhatsApp is installed, attempt to open the app
         const whatsappUrl = `whatsapp://send?phone=${phoneNumber}`;
         window.open(whatsappUrl, "_blank");
       } else {
-        // If WhatsApp is not installed, open WhatsApp Web and start a chat with the specified phone number
-        const phoneNumber = "+919182095396"; // Replace with the desired phone number
-        const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}`;
-
-        // Open WhatsApp Web after a short delay
-        setTimeout(() => {
-          window.open(whatsappWebUrl, "_blank");
-        }, 1000); // Adjust the delay time as needed
+        // If WhatsApp is not installed or the device is unable to recognize the scheme,
+        // open WhatsApp's website
+        const whatsappWebUrl = `https://wa.me/${phoneNumber}`;
+        window.open(whatsappWebUrl, "_blank");
       }
 
       // Display toast message
-      toast.info("Redirecting to WhatsApp...", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
+      // toast.info("Redirecting to WhatsApp...", {
+      //   position: toast.POSITION.TOP_CENTER,
+      //   onOpen: () => setIsButtonDisabled(true),
+      //   onClose: () => setIsButtonDisabled(false),
+      // });
     }
   };
 
