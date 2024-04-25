@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useLocation } from "react-router-dom";
 
 function NotFound() {
   const deployedURL = window.location.href;
