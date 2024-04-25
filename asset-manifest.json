@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reacthealth/static/css/main.1a67d462.css",
+    "main.js": "/reacthealth/static/js/main.e55983dd.js",
+    "static/media/profile-1.png": "/reacthealth/static/media/profile-1.87d772f378bdd6cdb161.png",
+    "static/media/doctor-picture.png": "/reacthealth/static/media/doctor-picture.120cc14da861af5c2211.png",
+    "static/media/doctor-group.png": "/reacthealth/static/media/doctor-group.01394386d8270bd40bc1.png",
+    "static/media/doctor-book-appointment.png": "/reacthealth/static/media/doctor-book-appointment.edb3f4ac282ff3fefaec.png",
+    "static/media/profile-2.png": "/reacthealth/static/media/profile-2.b9ae6ae561ce538f92d0.png",
+    "static/media/profile-3.png": "/reacthealth/static/media/profile-3.4ff4aca154b9578de60b.png",
+    "static/media/profile-4.png": "/reacthealth/static/media/profile-4.3c44185ab9c84614038f.png",
+    "index.html": "/reacthealth/index.html",
+    "main.1a67d462.css.map": "/reacthealth/static/css/main.1a67d462.css.map",
+    "main.e55983dd.js.map": "/reacthealth/static/js/main.e55983dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a67d462.css",
+    "static/js/main.e55983dd.js"
+  ]
+}
