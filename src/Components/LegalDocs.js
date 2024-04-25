@@ -11,7 +11,7 @@ function LegalDocs() {
     <div className="legal-section-title">
       <h1 className="legal-siteTitle">
         <Link to="/">
-          Health <span className="legal-siteSign">+</span>
+          React Health <span className="navbar-sign">🧬</span>
         </Link>
       </h1>
 
